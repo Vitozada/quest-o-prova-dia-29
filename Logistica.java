@@ -33,8 +33,7 @@ public class Logistica {
 		if (!tipoDeCargaPrioridade.equalsIgnoreCase("a") && !tipoDeCargaPrioridade.equalsIgnoreCase("n")  && !tipoDeCargaPrioridade.equalsIgnoreCase("b") ) {
 			System.err.println("Tipo de prioridade informada INVALIDA!");
 			return;
-		}
-		; // validação
+		}; // validação
 		
 		System.out.printf("Insira o Modal de transporte\nR: Rodoviário\nA: Aéreo\nF: Ferroviario\n");
 		modalTransporte = ler.next();
@@ -43,8 +42,7 @@ public class Logistica {
 		if (!modalTransporte.equalsIgnoreCase("r") && !modalTransporte.equalsIgnoreCase("a") && !modalTransporte.equalsIgnoreCase("f")) {
 			System.err.println("Tipo de Modal errado!");
 			return;
-		}
-		; // validação
+		}; // validação
 
 		// validação
 
@@ -54,8 +52,7 @@ public class Logistica {
 		if (regiaoDestino != 1 && regiaoDestino != 2 && regiaoDestino != 3) {
 			System.err.println("Tipo de regiao invalida!");
 			return;
-		}
-		; // validação
+		}; // validação
 		
 		System.out.println("Voce deseja rastreamento em tempo real?  S/N?");
 		rastreamento = ler.next();
@@ -63,7 +60,7 @@ public class Logistica {
 		if ((!rastreamento.equalsIgnoreCase("s") && !rastreamento.equalsIgnoreCase("n"))) {
 			System.err.println("Opção para rastreamento INVALIDO!");
 			return;
-		} // validação
+		}; // validação
 
 		System.out.println("Voce deseja seguro para perca total?  S/N?");
 		perdaTotal = ler.next();
@@ -71,7 +68,7 @@ public class Logistica {
 		if (!perdaTotal.equalsIgnoreCase("s") && !perdaTotal.equalsIgnoreCase("n") ) {
 			System.err.println("Opção para perca total INVALIDA!");
 			return;
-		}// validação
+		};// validação
 		
 		freteBase = (pesoCarga * 0.45) + (distanciaEntrega * 0.55); //calculo frete base
 		
@@ -83,7 +80,7 @@ public class Logistica {
 			valorPrioridade = freteBase * 0.10;
 		}else {
 			valorPrioridade = 0;
-		}
+		};
 		
 		// acrescimo modal!
 		
@@ -94,7 +91,7 @@ public class Logistica {
 			valorModal = freteBase * 0.30;
 		}else {
 			valorModal = freteBase * 0.15;
-		}
+		};
 		
 		double valorRegiao;
 		if (regiaoDestino == 1) {
@@ -103,7 +100,7 @@ public class Logistica {
 			valorRegiao = freteBase * 0.05;
 		}else {
 			valorRegiao = freteBase * 0.10;
-		}
+		};
 		
 		double  valor_rastreamento;
 		if (rastreamento.equalsIgnoreCase("s")) {
@@ -111,7 +108,7 @@ public class Logistica {
 			}else {
 				valor_rastreamento = 0;
 				
-			}
+			};
 		
 		total = freteBase + valorModal + valorRegiao + valor_rastreamento + valorPrioridade;
 		
@@ -120,8 +117,7 @@ public class Logistica {
 				valorSeguro = total * 0.08;
 				}else {
 					valorSeguro = 0;
-		
-	}
+		};
 		total = total + valorSeguro;	
 		//total = freteBase + valorModal + valorRegiao + valor_rastreamento + valorPrioridade;
 		System.out.printf("frete base:%.2f\nvalor modal: %.2f\nvalor regiao : %.2f\nvalor rastreamento: %.2f\nvalor prioridade: %.2f\nvalor seguro: %.2f\n TOTAL: %.2f\n", freteBase,valorModal,valorRegiao, valor_rastreamento, valorPrioridade, valorSeguro, total);   
@@ -135,8 +131,9 @@ public class Logistica {
 				System.err.println("Não recomendado: alto custo logístico.");
 			}else {
 				System.out.println("\u001B[32m] Recomendado: custo logístico compatível com o perfil da carga.");
-			}
+			};
 	}
 }
+
 
 	
