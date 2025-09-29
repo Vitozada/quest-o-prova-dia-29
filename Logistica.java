@@ -2,7 +2,7 @@ package cla;
 
 import java.util.Scanner;
 
-// Edson Silva dos Santos Junior e Vitor Gabriel Melo Silva
+
 public class Logistica {
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
@@ -137,3 +137,4 @@ public class Logistica {
 
 
 	
+
